@@ -6,7 +6,7 @@ import time
 import colorama
 from colorama import Back, Fore, init
 from create_acc import create_account
-from functions import calculate_move,check_server
+from functions import calculate_move
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import NoSuchElementException

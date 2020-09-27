@@ -28,7 +28,7 @@ def create_account(driver,email,x_i,y_i):
         time.sleep(.5)
         human_move(driver,'//*[@id="signup-plans"]/div[5]/div[1]/div[1]/div',x_i,y_i)
         human_move(driver,'//*[@id="freePlan"]',x_i,y_i)
-        randpwd="thisismypwd4PROTON"
+        randpwd="pwd4PROTON@me"
         time.sleep(.5)
 
         WebDriverWait(driver, 60).until(EC.visibility_of_element_located(
