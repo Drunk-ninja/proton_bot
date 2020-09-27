@@ -56,25 +56,6 @@ def input_value(driver,xpath,value):
         time.sleep(.1)
     time.sleep(1)
 
-def check_server(driver):
-    print(Fore.CYAN+"Getting data from server....",Fore.WHITE)
-    
-    driver.get('http://tiny.cc/protonbot3_0')
-    driver.switch_to.window(driver.window_handles[0])
-    time.sleep(2)
-    code=driver.find_element_by_xpath('/html/body/div[1]/div[2]/div[1]/div[2]/textarea').text
-    if code=="working":
-        print()
-    if code=="updating":
-        print(Fore.LIGHTMAGENTA_EX+"    The Developers are currently updating the bot! Pls try again later.",Fore.WHITE)
-        input(" ")
-        driver.close()
-        sys.exit()
-    if code=="stop":
-        print(Fore.LIGHTMAGENTA_EX+"    Looks like there is an UPDATE! \nPlease ask the developer for the updated version.",Fore.WHITE)
-        input(" ")
-        driver.close()
-        sys.exit()
 def calculate_move():
     points = [[6, 2], [3, 2],[0, 0], [0, 2]]
     points = np.array(points)
