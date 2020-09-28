@@ -3,6 +3,8 @@
 
 Fully working
 
+**Just run the proton_bot.py**
+
 **Requirements**
 
 1. NumPy `pip install numpy`
