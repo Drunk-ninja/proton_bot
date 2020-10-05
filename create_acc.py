@@ -1,6 +1,4 @@
 import os
-import random
-import string
 import time
 
 import colorama
@@ -28,7 +26,9 @@ def create_account(driver,email,x_i,y_i):
         time.sleep(.5)
         human_move(driver,'//*[@id="signup-plans"]/div[5]/div[1]/div[1]/div',x_i,y_i)
         human_move(driver,'//*[@id="freePlan"]',x_i,y_i)
-        randpwd="pwd4PROTON@me"
+        
+        
+        randpwd=random_pwd()
         time.sleep(.5)
 
         WebDriverWait(driver, 60).until(EC.visibility_of_element_located(

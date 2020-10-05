@@ -27,9 +27,9 @@ def random_user():
     randuser="".join(randuser)
     return randuser
 
-def random_pwd(stringLength=9):
-    lettersAndDigits=string.ascii_letters+string.digits
-    return ''.join(random.choice(lettersAndDigits) for i in range(stringLength))
+def random_pwd():
+    l=string.ascii_letters+string.digits
+    return str(random.randint(0,9))+"pwd@PROTON"+str(random.randint(0,9))
 
 def new_tab(driver,url):
     driver.execute_script('''window.open("{}","_blank");'''.format(url))
@@ -79,7 +79,7 @@ def human_move(driver,xpath,x_i,y_i):
     action=ActionChains(driver)
     action.move_to_element(startElement)
     action.perform()
-    c = 3
+    c = 5
     i = 0
     for mouse_x, mouse_y in zip(x_i, y_i):
         action.move_by_offset(mouse_x,mouse_y)
