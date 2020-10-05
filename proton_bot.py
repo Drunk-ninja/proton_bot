@@ -18,8 +18,6 @@ from verify import verification
 init(convert = True)
 
 driver_path = "default"
-driver_path = 'Drivers/chromedriver.exe'
-clear_cmd = 'cls'
 
 
 os_name = platform.system()
