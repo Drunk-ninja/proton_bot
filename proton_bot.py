@@ -5,13 +5,15 @@ import time
 
 import colorama
 from colorama import Back, Fore, init
-from create_acc import create_account
-from functions import calculate_move
+from fake_useragent import UserAgent
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
+
+from create_acc import create_account
+from functions import calculate_move
 from temp_gen import temp_mail
 from verify import verification
 
@@ -56,21 +58,13 @@ print(Fore.BLUE+'''
         ░░░██║░░░██║░░██║██║██║░░██║███████╗  ██████╦╝╚█████╔╝░░░██║░░░
         ░░░╚═╝░░░╚═╝░░╚═╝╚═╝╚═╝░░╚═╝╚══════╝  ╚═════╝░░╚════╝░░░░╚═╝░░░                                      
     ''', Fore.WHITE)
-
-print(Fore.GREEN+'''
-                ▀█▀ █▀▀ █▀▀ █ █ ▀█▀ ▄▀█ █▄ █ █ █▀▀  
-                ░█░ ██▄ █▄▄ █▀█ ░█░ █▀█ █░▀█ █ █▄▄  
-
-                        ▄▀█ █▄ █ █▀▄
-                        █▀█ █░▀█ █▄▀
-
-                █▀█ █▀▀ ▀█▀ ▄▀█ █▀▀ █▀█ █▄ █
-                █▄█ █▄▄ ░█░ █▀█ █▄█ █▄█ █░▀█
-''', Fore.WHITE)
 print("Discord: TECHTANIC#8090")
 options = Options()
 options.headless = True
 options.add_argument("--log-level=3")
+user_agent = UserAgent().random
+print(user_agent)
+options.add_argument(f'user-agent={user_agent}')
 driver = webdriver.Chrome(options = options, executable_path = driver_path)
 print("- . -.-. .... - .- -. .. -.-.")
 
