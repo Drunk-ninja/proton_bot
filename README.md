@@ -16,3 +16,6 @@ BTC :`14JNjiNoiKcbCHcxcqUxgJcVgyDfhGbxQF`
 3. Download the chromedriver for your version of chrome of your OS. (https://chromedriver.chromium.org/downloads)
 
 4. Google Chrome
+
+
+If not working dm TECHTANIC#8090
