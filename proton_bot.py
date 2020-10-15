@@ -62,9 +62,6 @@ print("Discord: TECHTANIC#8090")
 options = Options()
 options.headless = True
 options.add_argument("--log-level=3")
-user_agent = UserAgent().random
-print(user_agent)
-options.add_argument(f'user-agent={user_agent}')
 driver = webdriver.Chrome(options = options, executable_path = driver_path)
 print("- . -.-. .... - .- -. .. -.-.")
 
